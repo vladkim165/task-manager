@@ -1,10 +1,6 @@
 /** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+};
 
-const withPlugins = require('next-compose-plugins');
-const withAssetManifest = require('next-assets-manifest');
-
-module.exports = withPlugins([
-  withAssetManifest,
-]);
-
-
+module.exports = nextConfig;
