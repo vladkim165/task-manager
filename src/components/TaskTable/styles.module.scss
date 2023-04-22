@@ -1,0 +1,80 @@
+@import "@/styles/variables.global.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+  padding: 24px 32px;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.taskTable {
+  display: flex;
+  justify-content: space-between;
+
+  @media screen and (max-width: 1050px) {
+    flex-direction: column;
+    row-gap: 36px;
+  }
+}
+
+.taskModal {
+  padding: 32px;
+  font-size: 16px;
+
+  .title {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .rowTitle {
+    display: flex;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .formRow {
+    display: block;
+    margin-top: 24px;
+
+    label {
+      font-weight: 600;
+    }
+  }
+
+  .buttonGroup {
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 12px;
+    margin-top: 24px;
+
+    button {
+      padding: 16px 32px;
+      font-size: 16px;
+      border-radius: 12px;
+      color: $white;
+      font-weight: 600;
+
+      @media screen and (max-width: 500px) {
+        padding: 12px;
+      }
+    }
+
+    .saveButton {
+      background-color: $blue;
+    }
+
+    .deleteButton {
+      background-color: $error;
+    }
+  }
+
+
+}
+
+
+.errorMessage {
+  color: $error;
+  font-weight: 500;
+}

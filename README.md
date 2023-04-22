@@ -1,38 +1,30 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Тестовое задание 4DEV
 
-## Getting Started
+# Используемый стек: React, Next.js, Redux Toolkit, SCSS modules, Material UI, Typescript, ESLint.
 
-First, run the development server:
+# Основные задачи:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+Выполнены все основные задания - респонсив, все страницы(также добавлена страница 404, если введён некорректный урл).  
+Использовал Next.js API для получения данных, все запросы отправляются с клиента(если бы список был большой, получать данные на сервере - плохо для сео).  
+Немного поменял роуты на свое усмотрение:  
+/ - Главный экран с тасками  
+/auth - форма логина  
+/error - страница с модалкой об ошибке доступа  
+/любой несуществующий роут - 404 ошибка
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+API-эндпойнты:  
+POST /api/auth - получение токена  
+GET /api/authors - получение списка авторов  
+GET /api/tasks - получение списка тасок
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+При авторизации создаётся рандомный ключ из 20 символов  
+Токен записывается в куку (решил не использовать localStorage для редиректа с сервера, а не на клиенте, т.к. на сервере нет localStorage)  
+В случае попытке доступа к странице / без ключа, пользователя редиректит на страницу /error  
+Все модалки сделаны и работают, в сторе Redux'a храню список задач, список авторов, а также фильтр по дате создания.  
+Также в формах присутствует валидация (для значений формы и валидации использовал связку formik+yup)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+# Доп задачи:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Фильтрация списков - выполнено  
+Вывод приложения в 1 файл - не сделано. Чтобы это сделать в контексте Next.js необходимо установить модуль, создающий assetsMap, изменить конфиг вебпака и создать, например, скрипт, который проходится по этой мапе и формирует единый html.  
+Обеспечить поддержку IE 10 - next.js под капотом поддерживает большинство использующихся браузеров. Поддержка IE10 была прекращена Microsoft уже давно, поэтому задача показалась странной. Однако, для её выполнения, нужно настроить babel на полифиллы, но это может увеличить исходный вес файлов.

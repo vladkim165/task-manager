@@ -1,0 +1,49 @@
+html,
+body,
+ul,
+li,
+h1,
+h2,
+h3,
+p,
+ol {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  min-height: 100%;
+}
+
+::-moz-focus-inner {
+  border: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+b,
+strong {
+  font-weight: 700;
+}
+
+button,
+input,
+textarea {
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+  border: none;
+  outline: none !important;
+}
+
+ul,
+ol {
+  list-style: none;
+}

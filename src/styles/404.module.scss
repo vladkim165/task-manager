@@ -1,0 +1,15 @@
+@import "@/styles/variables.global.scss";
+
+.notFound {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 10px;
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.returnButton {
+  color: $blue;
+}

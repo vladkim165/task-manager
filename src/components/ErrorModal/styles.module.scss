@@ -1,0 +1,37 @@
+@import "@/styles/variables.global.scss";
+
+.modal {
+  max-width: 500px;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3);
+  text-align: center;
+  padding: 36px;
+  width: calc(100% - 48px);
+}
+
+
+.title {
+  font-size: 24px;
+  margin-bottom: 32px;
+  font-family: 'Google Sans', sans-serif;
+}
+
+
+.closeButton {
+  background-color: $blue;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  margin-top: 32px;
+}
+
+
+.closeButton:hover {
+  background-color: $light-blue;
+}
