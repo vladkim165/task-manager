@@ -2,6 +2,8 @@
 
 # Используемый стек: React, Next.js, Redux Toolkit, SCSS modules, Material UI, Typescript, ESLint.
 
+# Задеплоен на Vercel: https://task-manager-nu-pied.vercel.app/error
+
 # Основные задачи:
 
 Выполнены все основные задания - респонсив, все страницы(также добавлена страница 404, если введён некорректный урл).  
