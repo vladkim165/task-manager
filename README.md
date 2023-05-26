@@ -15,7 +15,7 @@
 /любой несуществующий роут - 404 ошибка
 
 API-эндпойнты:  
-POST /api/auth - получение токена  
+POST /api/auth - получение токена (login: admin, password: admin)
 GET /api/authors - получение списка авторов  
 GET /api/tasks - получение списка тасок
 
